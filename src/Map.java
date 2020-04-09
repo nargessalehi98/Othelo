@@ -3,9 +3,8 @@ import java.util.Arrays;
 import java.util.Scanner;
 import java.util.SortedMap;
 
-public class Map {
+public class Map extends GameRules {
     private ArrayList<ArrayList> map;
-    private boolean turn;
     private String empty;
     private String white;
     private String black;
