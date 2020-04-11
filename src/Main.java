@@ -1,23 +1,23 @@
 public class Main {
 
     public static void main(String[] args) {
-        Map map = new Map();
-        map.print();
+        GameRules game = new GameRules();
+        game.print();
         while (true) {
             String white = "| \u26AA |";
             String black = "| \u26AB |";
             System.out.println("Black's turn :");
-            boolean checkBlack = map.putDisk(black);
-            map.print();
+            boolean checkBlack = game.putDisk(black);
+            game.print();
             System.out.println("White's turn :");
-            boolean checkWhite = map.putDisk(white);
-            if (checkBlack && checkWhite || map.fullMap()) {
+            boolean checkWhite = game.putDisk(white);
+            if (checkBlack && checkWhite || game.checkFullMap()) {
                 System.out.println("game is over !");
-                map.findWinner();
+                game.findWinner();
+                game.print();
                 break;
             }
-            map.print();
-
+            game.print();
         }
     }
 }
